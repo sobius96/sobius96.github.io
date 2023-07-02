@@ -1,8 +1,10 @@
 html {
+  font-family: 'Open-Sans', sans-serif;
   background-color: rgb(241, 247, 237);
   width: 100%;
 }
 
 body {
-  width: 80%;
+  padding_left: 5%;
+  padding_right: 5%;
 }
