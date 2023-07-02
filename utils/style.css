@@ -3,8 +3,22 @@ html {
   width: 100%;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15%;
+}
+
 body {
   font-family: 'Open-Sans', sans-serif;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
 }
