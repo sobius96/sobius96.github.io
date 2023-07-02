@@ -1,24 +1,58 @@
 html {
-  background-color: rgb(241, 247, 237);
-  width: 100%;
+	background-color: rgb(241, 247, 237);
+	width: 100%;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2.5%;
 }
 
 body {
-  font-family: 'Open-Sans', sans-serif;
-  padding-left: 5%;
-  padding-right: 5%;
+	font-family: 'Open-Sans', sans-serif;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2.5%;
+}
+
+h1 {
+	color: rgb(40, 40, 255);
+	font-size: 60px;
+	font-weight: 500;
+}
+
+h2 {
+	color: rgb(40, 40, 255);
+	font-size: 20px;
+}
+
+a {
+	color: rgb(40, 40, 255);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div {
+	color: rgb(50, 50, 235);
+}
+
+.header_right {
+	color: rgb(255, 40, 40);
+}
+
+.hole {
+	background-color: rgb(201, 207, 197);
+	padding: 1%;
+	border-radius: 5px;
 }
