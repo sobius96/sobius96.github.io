@@ -42,6 +42,22 @@ a:hover {
     color: var(--hover);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: calc(var(--unit_px) * 4);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: var(--secondary);
+    padding: var(--unit_percent);
+    border-radius: var(--unit_px);
+    box-shadow: 4px 4px;
+}
+
 .wrapper {
     max-width: 1200px;
     margin-left: auto;
@@ -58,4 +74,10 @@ a:hover {
 .header {
     display: flex;
     justify-content: space-between;
+}
+
+.format {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--unit_px) * 0.5);
 }
