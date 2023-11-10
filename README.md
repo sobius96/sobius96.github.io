@@ -8,7 +8,7 @@ Entwicklung einer Web-Anwendung auf Basis von PHP inkl. Design (CSS), Geschäfts
 
 ## Basic GitHub Regeln
 
-1. Zu begin immer **git fetch** & **git pull** durchführen
+1. Zu begin immer **git fetch** & **git pull** durchführen.
 2. Es wird auf dem Branch _**develop**_ entwickelt.
 3. Was zu tun ist, kann unter _**Issues**_ eingesehen werden.
 4. Wenn an einem _**Issue**_ gearbeitet wird, wird an seinen _**Commit**_ ein **#x** angefügt, wobei das **x** durch die Nummer des _**Issues**_ ersetzt wird, an welchem gearbeitet wird.
