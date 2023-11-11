@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
-        <title>elephriend | me</title>
+        <title>elephriend | sign in</title>
     </head>
     <body>
         <header>
@@ -13,12 +13,14 @@
                 <nav>
                     <a href="../index.html">Home</a>
                     <a href="login.html">Login</a>
-                    <a href="me.html">Me</a>
+                    <a href="me.php">Me</a>
                 </nav>
             </div>
         </header>
         <div class="wrapper content">
-            dynamische daten durch php
+            <?php 
+                echo "no connection to db"
+            ?>
         </div>
         <footer>
             <div class="wrapper">

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
-        <title>elephriend | sign in</title>
+        <title>elephriend | me</title>
     </head>
     <body>
         <header>
@@ -18,7 +18,9 @@
             </div>
         </header>
         <div class="wrapper content">
-            hier kommt ein form hin
+            <?php 
+                echo "no connection to db"
+            ?>
         </div>
         <footer>
             <div class="wrapper">

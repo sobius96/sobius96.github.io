@@ -4,5 +4,5 @@
     echo $_POST["password"];
 ?>
 <script>
-    window.location.replace("/utils/me.html")
+    window.location.replace("/utils/me.php")
 </script>
