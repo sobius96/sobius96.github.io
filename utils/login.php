@@ -1,8 +1,9 @@
 <?php
-    echo $_POST["username"];
-    echo "<br>";            
-    echo $_POST["password"];
+    // ToDo
+    $user = $_POST["username"];
+    $password = hash('sha256', $_POST["password"]);
+    echo sprintf("User: %s, Password Hash: %s", $user, $password);
 ?>
-<script>
+<!-- <script>
     window.location.replace("/utils/me.php")
-</script>
+</script> -->
