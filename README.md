@@ -20,4 +20,4 @@ Entwicklung einer Web-Anwendung auf Basis von PHP inkl. Design (CSS), Geschäfts
 2. Es wird darauf geachtet, unnötigen Code zu vermeiden.
 3. Es wird so gut es geht versucht, den Code simpel und überschaubar zu halten.
 4. Es wird darauf geachtet, **Nesting** zu vermeiden.
-5. Wenn dynamischer Kontent existiert, wird, wenn möglich, dies über eine **HTML-Datei** mit **PHP-Tag** angezeigt.
+5. **PHP Content** muss zwingend in einer **.php Datei** eingefügt sein, da der Webserver die **PHP Tags** in einer **HTML Datei** nicht erkennt.
