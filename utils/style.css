@@ -22,6 +22,10 @@ header {
 }
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: var(--secondary);
     padding-top: var(--unit_percent);
     padding-bottom: var(--unit_percent);
