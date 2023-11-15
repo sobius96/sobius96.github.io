@@ -9,7 +9,7 @@
     //create connection to DB
     //works with that port, user and password on the PC of Zinni
     //ToDo: get Values from .env
-    $db_connection = pg_connect("host=127.0.0.1 port=1337 user=postgres password=Hunter1337") or die("Could not connect");
+    $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $_ENV["Host"], $_ENV["Port"], $_ENV["User"], $_ENV["Password"])) or die("Could not connect");
     echo "Connection successfully";
     pg_close($db_connection);
 ?>
