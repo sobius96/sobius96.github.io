@@ -17,7 +17,8 @@ Entwicklung einer Web-Anwendung auf Basis von PHP inkl. Design (CSS), Geschäfts
 ## Basic Entwicklungsregeln
 
 1. Alles auf Code Seite (Variablen, Klassen, etc.) wird auf Englisch definiert.
-2. Es wird darauf geachtet, unnötigen Code zu vermeiden.
-3. Es wird so gut es geht versucht, den Code simpel und überschaubar zu halten.
-4. Es wird darauf geachtet, **Nesting** zu vermeiden.
-5. **PHP Content** muss zwingend in einer **.php Datei** eingefügt sein, da der Webserver die **PHP Tags** in einer **HTML Datei** nicht erkennt.
+2. Für die volle Funktionalität muss eine .env am Beispiel der .env.example erstellt werden.
+3. Es wird darauf geachtet, unnötigen Code zu vermeiden.
+4. Es wird so gut es geht versucht, den Code simpel und überschaubar zu halten.
+5. Es wird darauf geachtet, **Nesting** zu vermeiden.
+6. **PHP Content** muss zwingend in einer **.php Datei** eingefügt sein, da der Webserver die **PHP Tags** in einer **HTML Datei** nicht erkennt.
