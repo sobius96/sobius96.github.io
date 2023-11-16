@@ -7,6 +7,7 @@
     }
 
     //checking the values of sign-in process
+    //check if password has the right len
     function valid_len($password) {
         if ((8 <= strlen($password)) and (strlen($password) <= 16)) {
             return TRUE;
@@ -14,7 +15,7 @@
             return FALSE;
         }
     }
-
+    //check if the passwords are the same
     function same_password($password_1, $password_2) {
         if (strcmp($password_1, $password_2) !== 0) {
             return FALSE;
