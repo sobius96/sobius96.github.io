@@ -7,10 +7,10 @@
     $env = parse_ini_file($envFilepath);
 
     //Get Username, Mail and Password 1 and 2 from the Sign-In-Form
-    $user = $_POST["username"]
-    $mail = $_POST["mail"]
-    $password_1 = $_POST["password_1"]
-    $password_2 = $_POST["password_2"]
+    $user = $_POST["username"];
+    $mail = $_POST["mail"];
+    $password_1 = $_POST["password_1"];
+    $password_2 = $_POST["password_2"];
 
     //create connection to DB
     //works with values of .env File
