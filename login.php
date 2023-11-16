@@ -1,10 +1,11 @@
 <?php
     //ToDo: remove every echo if finished
 
+    //import functions
+    require __DIR__ . '/utils/functions.php';
+
     //loading the values of the .env File
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $envFilepath = "$root/.env";
-    $env = parse_ini_file($envFilepath);
+    $env = load_env();
 
     //Get Username and Password from the Loginform and Hash the Password with sha256
     $user = $_POST["username"];

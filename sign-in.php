@@ -1,10 +1,11 @@
 <?php 
     //ToDo: remove every echo if finished
 
+    //import functions
+    require __DIR__ . '/utils/functions.php';
+
     //loading the values of the .env File
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $envFilepath = "$root/.env";
-    $env = parse_ini_file($envFilepath);
+    $env = load_env();
 
     //Get Username, Mail and Password 1 and 2 from the Sign-In-Form
     $user = $_POST["username"];
