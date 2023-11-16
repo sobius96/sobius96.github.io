@@ -18,7 +18,21 @@
             </div>
         </header>
         <div class="wrapper content">
-            hier kommt ein form hin
+            <form action="sign-in.php" method="post">
+                <div class="format">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                    <label for="mail">Email</label>
+                    <input type="text" id="mail" name="mail">
+                    <label for="password_1">Passwort</label>
+                    <input type="password" id="password_1" name="password_1">
+                    <label for="password_2">repeat Passwort</label>
+                    <input type="password" id="password_2" name="password_2">
+                </div>
+                <div class="format">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
         </div>
         <footer>
             <div class="wrapper">
