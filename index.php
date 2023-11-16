@@ -25,7 +25,16 @@
         </div>
         <footer>
             <div class="wrapper">
-                Ich bin ein Fuß
+            <div class="header">
+                    <div>
+                        © 2023 elephriend.
+                    </div>
+                    <div>
+                        <a href="imprint.html">
+                            Impressum
+                        </a>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>
