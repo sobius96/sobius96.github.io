@@ -46,6 +46,12 @@ a:hover {
     color: var(--hover);
 }
 
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -84,4 +90,10 @@ form {
     display: flex;
     flex-direction: column;
     gap: calc(var(--unit_px) * 0.5);
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
