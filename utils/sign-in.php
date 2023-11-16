@@ -13,7 +13,13 @@
     $password_1 = $_POST["password_1"];
     $password_2 = $_POST["password_2"];
 
-    
+    //check if Inputs are valid
+    //ToDo: ErrorPage, check if Username is free, check if mail is free
+    if (same_password($password_1, $password_2) and valid_len($password_1)) {
+        echo "Password accepted <br>";
+    } else {
+        echo "something is wrong with password <br>";
+    }
 
     //create connection to DB
     //works with values of .env File
