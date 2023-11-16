@@ -12,6 +12,8 @@
     $password_1 = $_POST["password_1"];
     $password_2 = $_POST["password_2"];
 
+    
+
     //create connection to DB
     //works with values of .env File
     $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
@@ -20,5 +22,5 @@
 ?>
 <!-- uncomment if finished -->
 <!-- <script>
-    window.location.replace("/utils/me.php")
+    window.location.replace("me.php")
 </script> -->
