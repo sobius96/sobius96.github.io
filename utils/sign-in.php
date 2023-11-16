@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <title>elephriend | sign in</title>
-    </head>
-    <body>
-        <header>
-            <div class="wrapper header">
-                elephriend
-                <nav>
-                    <a href="../index.php">Home</a>
-                    <a href="login.html">Login</a>
-                    <a href="me.php">Me</a>
-                </nav>
-            </div>
-        </header>
-        <div class="wrapper content">
-            <?php 
-                echo "no connection to db"
-            ?>
-        </div>
-        <footer>
-            <div class="wrapper">
-                Ich bin ein Fuß
-            </div>
-        </footer>
-    </body>
-</html>
+<?php 
+    //ToDo: remove every echo if finished
+
+    //loading the values of the .env File
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $envFilepath = "$root/.env";
+    $env = parse_ini_file($envFilepath);
+
+    //Get Username, Mail and Password 1 and 2 from the Sign-In-Form
+    $user = $_POST["username"]
+    $mail = $_POST["mail"]
+    $password_1 = $_POST["password_1"]
+    $password_2 = $_POST["password_2"]
+
+    //create connection to DB
+    //works with values of .env File
+    $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
+    echo "Connection successfully";
+    pg_close($db_connection);
+?>
+<!-- uncomment if finished -->
+<!-- <script>
+    window.location.replace("/utils/me.php")
+</script> -->
