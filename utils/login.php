@@ -2,7 +2,7 @@
     //ToDo: remove every echo if finished
 
     //import functions
-    require __DIR__ . '/utils/functions.php';
+    require __DIR__ . '/functions.php';
 
     //loading the values of the .env File
     $env = load_env();
