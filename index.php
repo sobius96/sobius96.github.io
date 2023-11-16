@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="utils/style.css" rel="stylesheet" type="text/css">
-        <link href="utils/img/elephriend-1-ele.png" rel="icon" type="image/png">
+        <link href="utils/img/elephriend_icon.png" rel="icon" type="image/png">
         <title>elephriend</title>
     </head>
     <body>
