@@ -1,5 +1,5 @@
 <?php
-    // ToDo
+    //ToDo: remove every echo if finished
 
     //loading the values of the .env File
     $root = $_SERVER['DOCUMENT_ROOT'];
@@ -12,11 +12,12 @@
     echo sprintf("User: %s, Password Hash: %s <br>", $user, $password);
 
     //create connection to DB
-    //works with that port, user and password on the PC of Zinni
+    //works with values of .env File
     $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
     echo "Connection successfully";
     pg_close($db_connection);
 ?>
+<!-- uncomment if finished -->
 <!-- <script>
     window.location.replace("/utils/me.php")
 </script> -->
