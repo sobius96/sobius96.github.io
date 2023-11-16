@@ -11,7 +11,7 @@
         <header>
             <div class="wrapper header">
                 <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
-                <nav>
+                <nav class="center">
                     <a href="index.php">Home</a>
                     <a href="login.html">Login</a>
                     <a href="me.php">Me</a>
