@@ -14,9 +14,23 @@
 
     //create connection to DB
     //works with values of .env File
-    $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
-    echo "Connection successfully";
-    pg_close($db_connection);
+    try {
+        $pdo = new PDO(sprintf("pgsql:host=%s; port=%s;", $env["Host"], $env["Port"]), $env["User"], $env["Password"], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+        
+        if ($pdo) {
+            echo "Connected";
+            $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
+            $statement = $pdo->prepare($sql);
+            $statement->execute([$user, $password]);
+            print_r($statement->fetchAll(PDO::FETCH_ASSOC));
+        }
+    } catch (PDOException $e) {
+        die($e->getMessage());
+    } finally {
+        if ($pdo) {
+            $pdo = null;
+        }
+    }
 ?>
 <!-- uncomment if finished -->
 <!-- <script>
