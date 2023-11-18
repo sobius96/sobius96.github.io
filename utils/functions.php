@@ -23,4 +23,24 @@
             return TRUE;
         }
     }
+
+    //connect to DB and execute sql
+    function access_database($sql, $params, $env) {
+        try {
+            $pdo = new PDO(sprintf("pgsql:host=%s; port=%s;", $env["Host"], $env["Port"]), $env["User"], $env["Password"], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            
+            if ($pdo) {
+                echo "Connected";
+                $statement = $pdo->prepare($sql);
+                $statement->execute($params);
+                return $statement->fetchAll(PDO::FETCH_ASSOC);
+            }
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        } finally {
+            if ($pdo) {
+                $pdo = null;
+            }
+        }
+    }
 ?>

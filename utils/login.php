@@ -14,23 +14,10 @@
 
     //create connection to DB
     //works with values of .env File
-    try {
-        $pdo = new PDO(sprintf("pgsql:host=%s; port=%s;", $env["Host"], $env["Port"]), $env["User"], $env["Password"], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-        
-        if ($pdo) {
-            echo "Connected";
-            $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
-            $statement = $pdo->prepare($sql);
-            $statement->execute([$user, $password]);
-            print_r($statement->fetchAll(PDO::FETCH_ASSOC));
-        }
-    } catch (PDOException $e) {
-        die($e->getMessage());
-    } finally {
-        if ($pdo) {
-            $pdo = null;
-        }
-    }
+    $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
+    $params = [$user, $password];
+    $values = access_database($sql, $params, $env);
+    print_r($values);
 ?>
 <!-- uncomment if finished -->
 <!-- <script>
