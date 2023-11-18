@@ -46,9 +46,9 @@
     //preparing the own database data
     function prep_single_data($data) {
         if (!$data) {
-            echo "nix Data";
+            return [FALSE, []];
         } else {
-            echo "viel Data";
+            return [TRUE, $data];
         }
     }
 ?>

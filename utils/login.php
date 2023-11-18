@@ -10,16 +10,22 @@
     //Get Username and Password from the Loginform and Hash the Password with sha256
     $user = $_POST["username"];
     $password = hash('sha256', $_POST["password"]);
-    echo sprintf("User: %s, Password Hash: %s <br>", $user, $password);
 
     //create connection to DB
     //works with values of .env File
     $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
     $params = [$user, $password];
     $values = access_database($sql, $params, $env);
-    prep_single_data($values);
+    
+    //working with data
+    $data = prep_single_data($values);
+    if (!$data[0]) {
+        setcookie("user", "");
+        header("Location: http://localhost/index.php");
+        exit();
+    } else {
+        setcookie("user", $data[1][0]["username"]);
+        header("Location: http://localhost/me.php");
+        exit();
+    }
 ?>
-<!-- uncomment if finished -->
-<!-- <script>
-    window.location.replace("/utils/me.php")
-</script> -->
