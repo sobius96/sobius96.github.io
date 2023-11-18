@@ -21,7 +21,7 @@
     $data = prep_single_data($values);
     if (!$data[0]) {
         setcookie("user", "");
-        header("Location: http://localhost/index.php");
+        header("Location: http://localhost/login.html");
         exit();
     } else {
         setcookie("user", $data[1][0]["username"]);
