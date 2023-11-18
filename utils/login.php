@@ -17,7 +17,7 @@
     $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
     $params = [$user, $password];
     $values = access_database($sql, $params, $env);
-    print_r($values);
+    prep_single_data($values);
 ?>
 <!-- uncomment if finished -->
 <!-- <script>

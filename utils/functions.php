@@ -30,7 +30,6 @@
             $pdo = new PDO(sprintf("pgsql:host=%s; port=%s;", $env["Host"], $env["Port"]), $env["User"], $env["Password"], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             
             if ($pdo) {
-                echo "Connected";
                 $statement = $pdo->prepare($sql);
                 $statement->execute($params);
                 return $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -41,6 +40,15 @@
             if ($pdo) {
                 $pdo = null;
             }
+        }
+    }
+
+    //preparing the own database data
+    function prep_single_data($data) {
+        if (!$data) {
+            echo "nix Data";
+        } else {
+            echo "viel Data";
         }
     }
 ?>
