@@ -8,12 +8,20 @@
         <title>elephriend. | me</title>
     </head>
     <body>
-        <?php 
+        <?php
+            require __DIR__ . '/utils/functions.php';
+
             if (!isset($_COOKIE["user"])) {
                 header("Location: http://localhost/login.html");
                 exit();
             } else {
-                
+                $env = load_env();
+
+                $sql = 'SELECT * FROM user_table WHERE username=?';
+                $params = [$_COOKIE["user"]];
+                $values = access_database($sql, $params, $env);
+
+                $data = prep_single_data($values);
             }
         ?>
         <header>
@@ -30,19 +38,19 @@
             <div class="me">
                 <div>
                     <?php
-                        echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $img);  
+                        echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["img"]);  
                     ?>
                 </div>
                 <div class="headlines" >
                     <div class="userBig" >
                         <?php 
-                            echo $user;
+                            echo $data[1][0]["user"];
                         ?>
                     </div>
                     <div class="devider"></div> 
                     <div class="usernameBig" >
                         <?php 
-                            echo $username;
+                            echo $data[1][0]["username"];
                         ?>
                     </div>
                 </div>
@@ -54,7 +62,7 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $birthday;
+                            echo $data[1][0]["birthday"];
                         ?>
                     </div>
                     <div class="dataHead">
@@ -62,7 +70,7 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $age;
+                            echo $data[1][0]["age"];
                         ?>
                     </div>
                     <div class="dataHead">
@@ -70,13 +78,13 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $location;
+                            echo $data[1][0]["location"];
                         ?>
                     </div>
                 </div>
                 <div class="bio">
                     <?php 
-                        echo $biography;
+                        echo $data[1][0]["biography"];
                     ?>
                 </div>
             </div>
