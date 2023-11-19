@@ -26,4 +26,22 @@
     $sql = 'INSERT INTO user_table(username, user_password, email) VALUES (?, ?, ?)';
     $params = [$user, $password, $mail];
     $values = access_database($sql, $params, $env);
+
+    //check if user exist now
+    $sql = 'SELECT user_id FROM user_table WHERE username=? AND user_password=?';
+    $params = [$user, $password];
+    $values = access_database($sql, $params, $env);
+
+    $data = prep_single_data($values);
+    if (!$data[0]) {
+        try {
+            setcookie("user", " ", time()-3600, "/");
+        } finally {
+            
+        }
+    } else {
+        setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
+        header("Location: http://localhost/me.php");
+        exit();
+    }
 ?>

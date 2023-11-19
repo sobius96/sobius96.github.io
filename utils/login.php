@@ -13,7 +13,7 @@
 
     //create connection to DB
     //works with values of .env File
-    $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
+    $sql = 'SELECT user_id FROM user_table WHERE username=? AND user_password=?';
     $params = [$user, $password];
     $values = access_database($sql, $params, $env);
     
