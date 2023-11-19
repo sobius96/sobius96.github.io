@@ -23,11 +23,7 @@
 
     //create connection to DB
     //works with values of .env File
-    $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
-    echo "Connection successfully";
-    pg_close($db_connection);
+    $sql = 'INSERT INTO user_table(username, user_password, email) VALUES (?, ?, ?)';
+    $params = [$user, $password, $mail];
+    $values = access_database($sql, $params, $env);
 ?>
-<!-- uncomment if finished -->
-<!-- <script>
-    window.location.replace("me.php")
-</script> -->
