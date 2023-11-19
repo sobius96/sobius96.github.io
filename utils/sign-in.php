@@ -16,7 +16,7 @@
     //check if Inputs are valid
     //ToDo: ErrorPage, check if Username is free, check if mail is free
     if (same_password($password_1, $password_2) and valid_len($password_1)) {
-        echo "Password accepted <br>";
+        $password = hash('sha256', $password_1);
     } else {
         echo "something is wrong with password <br>";
     }
