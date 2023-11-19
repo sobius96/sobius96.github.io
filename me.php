@@ -17,7 +17,7 @@
             } else {
                 $env = load_env();
 
-                $sql = 'SELECT * FROM user_table WHERE username=?';
+                $sql = 'SELECT * FROM user_table WHERE user_id=?';
                 $params = [$_COOKIE["user"]];
                 $values = access_database($sql, $params, $env);
 

@@ -27,7 +27,7 @@
             exit();
         }
     } else {
-        setcookie("user", $data[1][0]["username"], array ('path' => '/'));
+        setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
         header("Location: http://localhost/me.php");
         exit();
     }
