@@ -38,13 +38,13 @@
             <div class="me">
                 <div>
                     <?php
-                        echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["img"]);  
+                        echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["profile_picture"]);  
                     ?>
                 </div>
                 <div class="headlines" >
                     <div class="userBig" >
                         <?php 
-                            echo $data[1][0]["user"];
+                            echo $data[1][0]["user_name"];
                         ?>
                     </div>
                     <div class="devider"></div> 
@@ -78,13 +78,13 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $data[1][0]["location"];
+                            echo $data[1][0]["user_location"];
                         ?>
                     </div>
                 </div>
                 <div class="bio">
                     <?php 
-                        echo $data[1][0]["biography"];
+                        echo $data[1][0]["bio"];
                     ?>
                 </div>
             </div>
