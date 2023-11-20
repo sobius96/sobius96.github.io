@@ -1,6 +1,4 @@
 <?php 
-    //ToDo: remove every echo if finished
-
     //import functions
     require __DIR__ . '/functions.php';
 
