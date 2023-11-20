@@ -17,15 +17,21 @@
                 exit();
             } else {
                 $env = load_env();
+
+                $sql = 'SELECT * FROM user_table WHERE user_id=?';
+                $params = [$_COOKIE["user"]];
+                $values = access_database($sql, $params, $env);
+
+                $data = prep_single_data($values);
             }
         ?>
         <header>
             <div class="wrapper header">
                 <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
                 <nav class="center">
-                    <a href="index.php">Home</a>
-                    <a href="login.html">Login</a>
-                    <a href="me.php">Me</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../login.html">Login</a>
+                    <a href="../me.php">Me</a>
                 </nav>
             </div>
         </header>
