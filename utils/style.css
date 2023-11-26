@@ -1,8 +1,8 @@
 :root {
-    --primary: #deb887;
-    --secondary: #8fbc8f;
+    --primary: #f3efe0;
+    --secondary: #558b6e;
     --tertiary: #031005;
-    --hover: #fab9af;
+    --hover: #e76f51;
 
     --unit_px: 16px;
     --unit_percent: 1.5%;
@@ -10,7 +10,7 @@
 
 body {
     background-color: var(--primary);
-    font: var(--unit_px) Arial, sans-serif;
+    font: var(--unit_px) Arial, Helvetica, sans-serif;
     color: var(--tertiary);
     margin: 0;
 }
