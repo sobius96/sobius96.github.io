@@ -10,7 +10,7 @@
 
 body {
     background-color: var(--primary);
-    font: var(--unit_px) Arial, Helvetica, sans-serif;
+    font: var(--unit_px) Tahoma, sans-serif;
     color: var(--tertiary);
     margin: 0;
 }
