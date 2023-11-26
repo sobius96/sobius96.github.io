@@ -26,9 +26,10 @@
         ?>
         <header>
             <div class="wrapper header">
-                <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
+                <a href="index.php">
+                    <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
+                </a>
                 <nav class="center">
-                    <a href="index.php">Home</a>
                     <a href="login.html">Login</a>
                     <a href="me.php">Me</a>
                     <a href="utils/edit.php">Edit</a>
