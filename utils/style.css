@@ -198,6 +198,12 @@ form {
             border-radius: 20px;
             cursor: pointer;
         }
+        #logo {
+            width: 150px;
+            height: 75px;
+            object-fit: cover;
+            filter: invert(100%)
+        }
       }
 
 input[type="submit"] {
