@@ -1,5 +1,5 @@
 :root {
-    --primary: #F3EFE0;
+    --primary: #f3e0f0;
     --secondary: #67997f;
     --tertiary: #031005;
     --hover: #E76F51;
@@ -168,3 +168,13 @@ form {
     border: 3px solid white;
     object-fit: cover;
 }
+
+ @media (prefers-color-scheme: dark) {
+     :root {
+        --primary: #081e07;
+        --secondary: #3d6e55;
+        --tertiary: #f9f9f9;
+        --hover: #E76F51
+        }
+      }
+
