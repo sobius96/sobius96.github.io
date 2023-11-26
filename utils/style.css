@@ -1,12 +1,6 @@
 :root {
-<<<<<<< HEAD
-    --primary: #f3efe0;
-    --secondary: #558b6e;
-    --tertiary: #031005;
-    --hover: #e76f51;
-=======
-    --primary: #F3EFE0;
-    --secondary: #558B6E;
+    --primary: #f3e0f0;
+    --secondary: #67997f;
     --tertiary: #031005;
     --hover: #E76F51;
 >>>>>>> 8908df022235eaa9ed21152c40a1ebaacb23ce8f
@@ -175,3 +169,13 @@ form {
     border: 3px solid white;
     object-fit: cover;
 }
+
+ @media (prefers-color-scheme: dark) {
+     :root {
+        --primary: #081e07;
+        --secondary: #3d6e55;
+        --tertiary: #f9f9f9;
+        --hover: rgb(176, 239, 4);
+        }
+      }
+
