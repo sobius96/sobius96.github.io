@@ -57,6 +57,7 @@ form {
     padding: var(--unit_percent);
     border-radius: var(--unit_px);
     box-shadow: 4px 4px;
+
 }
 
 .wrapper {
@@ -178,3 +179,7 @@ form {
         }
       }
 
+input[type="submit"] {
+    font: var(--unit_px) 'Tahoma', sans-serif;
+    font-size: 14px;
+    }
