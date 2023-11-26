@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css">
         <link href="img/elephriend_icon.png" rel="icon" type="image/png">
-        <title>elephriend. | login</title>
+        <title>elephriend. | edit</title>
     </head>
     <body>
         <?php 
@@ -52,7 +52,7 @@
                         © 2023 elephriend.
                     </div>
                     <div>
-                        <a href="imprint.html">
+                        <a href="../imprint.html">
                             Impressum
                         </a>
                     </div>
