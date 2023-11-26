@@ -1,8 +1,8 @@
 :root {
-    --primary: #deb887;
-    --secondary: #8fbc8f;
+    --primary: #F3EFE0;
+    --secondary: #558B6E;
     --tertiary: #031005;
-    --hover: #fab9af;
+    --hover: #E76F51;
 
     --unit_px: 16px;
     --unit_percent: 1.5%;
