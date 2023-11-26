@@ -182,4 +182,16 @@ form {
 input[type="submit"] {
     font: var(--unit_px) 'Tahoma', sans-serif;
     font-size: 14px;
+    border-radius: 7px;
+    border: none;
     }
+
+input[type="text"] {
+    border: none;
+    border-radius: 7px;
+}
+
+input[type="password"] {
+    border: none;
+    border-radius: 7px;
+}
