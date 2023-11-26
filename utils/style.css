@@ -216,9 +216,13 @@ input[type="submit"] {
 input[type="text"] {
     border: none;
     border-radius: 7px;
+    padding-left: 5px;
+    font: var(--unit_px) Tahoma, sans-serif;
+    font-size: 14px;
 }
 
 input[type="password"] {
     border: none;
     border-radius: 7px;
+    padding-left: 5px;
 }
