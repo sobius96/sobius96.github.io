@@ -23,12 +23,12 @@
         try {
             setcookie("user", " ", time()-3600, "/");
         } finally {
-            header("Location: http://localhost/login.html");
+            header(sprintf("Location: http://%s/login.html", $env["Ip"]));
             exit();
         }
     } else {
         setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
-        header("Location: http://localhost/me.php");
+        header(sprintf("Location: http://%s/me.php", $env["Ip"]));
         exit();
     }
 ?>

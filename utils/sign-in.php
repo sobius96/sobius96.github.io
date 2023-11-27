@@ -39,7 +39,7 @@
         }
     } else {
         setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
-        header("Location: http://localhost/utils/edit.php");
+        header(sprintf("Location: http://%s/me.php", $env["Ip"]));
         exit();
     }
 ?>

@@ -11,12 +11,12 @@
         <?php
             require __DIR__ . '/utils/functions.php';
 
+            $env = load_env();
+            
             if (!isset($_COOKIE["user"])) {
-                header("Location: http://localhost/login.html");
+                header(sprintf("Location: http://%s/login.html", $env["Ip"]));
                 exit();
             } else {
-                $env = load_env();
-
                 $sql = 'SELECT * FROM user_table WHERE user_id=?';
                 $params = [$_COOKIE["user"]];
                 $values = access_database($sql, $params, $env);
