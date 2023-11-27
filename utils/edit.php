@@ -40,7 +40,29 @@
         <div class="wrapper content">
             <form action="edit.php" method="post">
                 <div class="format">
-
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
+                    <label for="bioImg">Bio Image</label>
+                    <div>
+                        <img id="bioImageSmall" src="img/bio/img_1.jpg" alt="Bio Image">
+                        <input type="radio" id="1" name="bioImg" value="1">
+                        <img id="bioImageSmall" src="img/bio/img_2.jpg" alt="Bio Image">
+                        <input type="radio" id="2" name="bioImg" value="2">
+                        <img id="bioImageSmall" src="img/bio/img_3.jpg" alt="Bio Image">
+                        <input type="radio" id="3" name="bioImg" value="3">
+                        <img id="bioImageSmall" src="img/bio/img_4.jpg" alt="Bio Image">
+                        <input type="radio" id="4" name="bioImg" value="4">
+                        <!-- <img id="bioImageSmall" src="img/bio/img_5.jpg" alt="Bio Image">
+                        <input type="radio" id="5" name="bioImg" value="5">
+                        <img id="bioImageSmall" src="img/bio/img_6.jpg" alt="Bio Image">
+                        <input type="radio" id="6" name="bioImg" value="6"> -->
+                    </div>
+                    <label for="birthday">Geburstag</label>
+                    <input type="date" id="birthday" name="birthday" value="<?php echo $data[1][0]['birthday']?>">
+                    <label for="location">Standort</label>
+                    <input type="text" id="location" name="location" value="<?php echo $data[1][0]['user_location'];?>">
+                    <label for="bio">Bio</label>
+                    <input type="text" id="bio" name="bio" value="<?php echo $data[1][0]['bio'];?>">
                 </div>
                 <div class="format">
                     <input type="submit" value="Save">

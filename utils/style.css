@@ -181,6 +181,14 @@ form {
     object-fit: cover;
 }
 
+#bioImageSmall {
+    width: 100px;
+    height: 100px;
+    border-radius: 9999px;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
  @media (prefers-color-scheme: dark) {
      :root {
         --primary: #0c2a0a;
