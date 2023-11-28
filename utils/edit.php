@@ -17,14 +17,17 @@
             if (!isset($_COOKIE["user"])) {
                 header(sprintf("Location: http://%s/login.html", $env["Ip"]));
                 exit();
-            } else {
-
-                $sql = 'SELECT * FROM user_table WHERE user_id=?';
-                $params = [$_COOKIE["user"]];
-                $values = access_database($sql, $params, $env);
-
-                $data = prep_single_data($values);
+            } 
+            if (!empty($_POST)) {
+                $sql = 'UPDATE user_table SET user_name=?, birthday=?, user_location=?, bio=?, profile_picture=? WHERE user_id=?';
+                $params = [$_POST["name"], $_POST["birthday"], $_POST["location"], $_POST["bio"], $_POST["bioImg"], $_COOKIE["user"]];
+                $new_values = access_database($sql, $params, $env);
             }
+            $sql = 'SELECT * FROM user_table WHERE user_id=?';
+            $params = [$_COOKIE["user"]];
+            $values = access_database($sql, $params, $env);
+
+            $data = prep_single_data($values);
         ?>
         <header>
             <div class="wrapper header">
@@ -42,7 +45,7 @@
                 <div class="format">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
-                    <label for="bioImg">Bio Image</label>
+                    <label>Bio Image</label>
                     <div>
                         <img id="bioImageSmall" src="img/bio/img_1.jpg" alt="Bio Image">
                         <input type="radio" id="1" name="bioImg" value="1">
