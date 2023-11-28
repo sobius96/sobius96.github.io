@@ -55,10 +55,10 @@
                         <input type="radio" id="3" name="bioImg" value="3">
                         <img id="bioImageSmall" src="img/bio/img_4.jpg" alt="Bio Image">
                         <input type="radio" id="4" name="bioImg" value="4">
-                        <!-- <img id="bioImageSmall" src="img/bio/img_5.jpg" alt="Bio Image">
+                        <img id="bioImageSmall" src="img/bio/img_5.jpg" alt="Bio Image">
                         <input type="radio" id="5" name="bioImg" value="5">
                         <img id="bioImageSmall" src="img/bio/img_6.jpg" alt="Bio Image">
-                        <input type="radio" id="6" name="bioImg" value="6"> -->
+                        <input type="radio" id="6" name="bioImg" value="6">
                     </div>
                     <label for="birthday">Geburstag</label>
                     <input type="date" id="birthday" name="birthday" value="<?php echo $data[1][0]['birthday']?>">
