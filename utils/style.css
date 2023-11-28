@@ -57,6 +57,7 @@ form {
     padding: var(--unit_percent);
     border-radius: var(--unit_px);
     box-shadow: 4px 4px;
+
 }
 
 .wrapper {
@@ -155,6 +156,17 @@ form {
     font-size: calc(var(--unit_px) * 1.25);
 }
 
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f3efe0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 #logo {
     width: 150px;
     height: 75px;
@@ -171,10 +183,26 @@ form {
 
  @media (prefers-color-scheme: dark) {
      :root {
-        --primary: #081e07;
+        --primary: #0c2a0a;
         --secondary: #3d6e55;
         --tertiary: #f9f9f9;
         --hover: rgb(176, 239, 4);
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #f9f9f9;
+            background-color: #081e0784;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #logo {
+            width: 150px;
+            height: 75px;
+            object-fit: cover;
+            filter: invert(100%)
         }
       }
 /*hallo*/
@@ -190,3 +218,23 @@ form {
     cursor: pointer;
 }
 
+input[type="submit"] {
+    font: var(--unit_px) 'Tahoma', sans-serif;
+    font-size: 14px;
+    border-radius: 7px;
+    border: none;
+    }
+
+input[type="text"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+    font: var(--unit_px) Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+}
