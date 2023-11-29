@@ -70,8 +70,22 @@
         }  
     }
 
-    //gives an error message
-    function alert($msg) {
-        echo "<script type='text/javascript'>alert('$msg');</script>";
+    //check input data
+    function check($data, $env, $important=true, $date=false) {
+        if (!$important) {
+            if ($date and empty($data)) {
+                return "0001-01-01";
+            } else if (!empty(trim($data))) {
+                return $data;
+            } else {
+                return "N/A";
+            }
+        } else if (empty($data)) {
+            setcookie("error", "  ", array ('path' => '/'));
+            header(sprintf("Location: http://%s/utils/edit.php", $env["Ip"]));
+            exit();
+        } else {
+            return $data;
+        }
     }
 ?>

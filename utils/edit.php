@@ -18,10 +18,17 @@
                 header(sprintf("Location: http://%s/login.html", $env["Ip"]));
                 exit();
             } 
-            if (!empty($_POST)) {
+            if (isset($_COOKIE["error"])) {
+                $msg = "<div class='error'>Du musst einen Namen, eine Bio und ein Bild angeben!</div>";
+                setcookie("error", "", time()-3600, "/");
+            } else if (!empty($_POST)) {
+                $msg = "";
+
                 $sql = 'UPDATE user_table SET user_name=?, birthday=?, user_location=?, bio=?, profile_picture=? WHERE user_id=?';
-                $params = [$_POST["name"], $_POST["birthday"], $_POST["location"], $_POST["bio"], $_POST["bioImg"], $_COOKIE["user"]];
+                $params = [check($_POST["name"], $env), check($_POST["birthday"], $env, false, true), check($_POST["location"], $env, false), check($_POST["bio"], $env), check($_POST["bioImg"], $env), $_COOKIE["user"]];
                 $new_values = access_database($sql, $params, $env);
+            } else {
+                $msg = "";
             }
             $sql = 'SELECT * FROM user_table WHERE user_id=?';
             $params = [$_COOKIE["user"]];
@@ -61,11 +68,12 @@
                         <input type="radio" id="6" name="bioImg" value="6" <?php if ($data[1][0]['profile_picture'] == 6) {echo "checked";}?>>
                     </div>
                     <label for="birthday">Geburstag</label>
-                    <input type="date" id="birthday" name="birthday" value="<?php echo $data[1][0]['birthday']?>">
+                    <input type="date" id="birthday" name="birthday" value="<?php if (!($data[1][0]['birthday'] === "0001-01-01")) {echo $data[1][0]['birthday'];}?>">
                     <label for="location">Standort</label>
-                    <input type="text" id="location" name="location" value="<?php echo $data[1][0]['user_location'];?>">
+                    <input type="text" id="location" name="location" value="<?php if (!($data[1][0]['user_location'] === "N/A")) {echo $data[1][0]['user_location'];}?>">
                     <label for="bio">Bio</label>
                     <input type="text" id="bio" name="bio" value="<?php echo $data[1][0]['bio'];?>">
+                    <?php echo $msg;?>
                 </div>
                 <div class="format">
                     <input type="submit" value="Save">
