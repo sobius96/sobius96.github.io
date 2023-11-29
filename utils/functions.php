@@ -54,20 +54,28 @@
     
     //preparing the date to a nicer format
     function prep_date($date) {
-        $date = date_parse_from_format("Y.n.j", $date);
-        return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
+        if (!($date === "0001-01-01")) {
+            $date = date_parse_from_format("Y.n.j", $date);
+            return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
+        } else {
+            return "N/A";
+        }
     }
 
     //calculates the age
     function age($date) {
-        $today = date_parse_from_format("j.n.Y", date("j.n.Y"));
-        $date = date_parse_from_format("j.n.Y", $date);
-        $age = intval($today["year"]) - intval($date["year"]);
-        if ((intval($today["month"]) <= intval($date["month"])) and (intval($today["day"]) < intval($date["day"]))) {
-            return $age - 1;
+        if (!($date === "N/A")) {
+            $today = date_parse_from_format("j.n.Y", date("j.n.Y"));
+            $date = date_parse_from_format("j.n.Y", $date);
+            $age = intval($today["year"]) - intval($date["year"]);
+            if ((intval($today["month"]) <= intval($date["month"])) and (intval($today["day"]) < intval($date["day"]))) {
+                return $age - 1;
+            } else {
+                return $age;
+            } 
         } else {
-            return $age;
-        }  
+            return "N/A";
+        }
     }
 
     //check input data

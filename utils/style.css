@@ -225,6 +225,10 @@ form {
     cursor: pointer;
 }
 
+.error {
+    color: #dc032d;
+}
+
 input[type="submit"] {
     font: var(--unit_px) 'Tahoma', sans-serif;
     font-size: 14px;
