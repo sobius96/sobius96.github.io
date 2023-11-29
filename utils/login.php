@@ -23,6 +23,7 @@
         try {
             setcookie("user", " ", time()-3600, "/");
         } finally {
+            setcookie("error", "Username oder Passwort stimmen nicht überein!", array ('path' => '/'));
             header(sprintf("Location: http://%s/login.html", $env["Ip"]));
             exit();
         }
