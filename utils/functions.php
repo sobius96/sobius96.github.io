@@ -56,4 +56,15 @@
         $date = date_parse_from_format("Y.n.j", $date);
         return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
     }
+
+    function age($date) {
+        $today = date_parse_from_format("j.n.Y", date("j.n.Y"));
+        $date = date_parse_from_format("j.n.Y", $date);
+        $age = intval($today["year"]) - intval($date["year"]);
+        if ((intval($today["month"]) <= intval($date["month"])) and (intval($today["day"]) < intval($date["day"]))) {
+            return $age - 1;
+        } else {
+            return $age;
+        }  
+    }
 ?>

@@ -72,7 +72,7 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $data[1][0]["age"];
+                            echo age(prep_date($data[1][0]["birthday"]));
                         ?>
                     </div>
                     <div class="dataHead">
