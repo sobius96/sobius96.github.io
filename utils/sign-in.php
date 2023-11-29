@@ -16,10 +16,11 @@
     if (same_password($password_1, $password_2) and valid_len($password_1)) {
         $password = hash('sha256', $password_1);
     } else {
+        setcookie("error", "Passwort muss 8-16 Zeichen lang sein und die Passwörter müssen übereinstimmen", array ('path' => '/'));
         header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
         exit();
     }
-    
+
     //create connection to DB
     //works with values of .env File
     $sql = 'INSERT INTO user_table(username, user_password, email) VALUES (?, ?, ?)';
