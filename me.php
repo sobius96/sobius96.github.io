@@ -30,9 +30,9 @@
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
                 <nav class="center">
-                    <a href="login.html">Login</a>
-                    <a href="me.php">Me</a>
-                    <a href="utils/edit.php">Edit</a>
+                    <a href="login.html" class="button">Login</a>
+                    <a href="me.php" class="button">Me</a>
+                    <a href="utils/edit.php" class="button">Edit</a>
                 </nav>
             </div>
         </header>

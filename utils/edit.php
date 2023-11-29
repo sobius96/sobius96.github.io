@@ -35,8 +35,8 @@
                     <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
                 <nav class="center">
-                    <a href="../login.html">Login</a>
-                    <a href="../me.php">Me</a>
+                    <a href="../login.html" class="button">Login</a>
+                    <a href="../me.php" class="button">Me</a>
                 </nav>
             </div>
         </header>
