@@ -16,9 +16,10 @@
     if (same_password($password_1, $password_2) and valid_len($password_1)) {
         $password = hash('sha256', $password_1);
     } else {
-        echo "something is wrong with password <br>";
+        header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+        exit();
     }
-
+    
     //create connection to DB
     //works with values of .env File
     $sql = 'INSERT INTO user_table(username, user_password, email) VALUES (?, ?, ?)';
@@ -35,7 +36,8 @@
         try {
             setcookie("user", " ", time()-3600, "/");
         } finally {
-            
+            header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+            exit();
         }
     } else {
         setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));

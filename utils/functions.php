@@ -51,12 +51,14 @@
             return [TRUE, $data];
         }
     }
-
+    
+    //preparing the date to a nicer format
     function prep_date($date) {
         $date = date_parse_from_format("Y.n.j", $date);
         return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
     }
 
+    //calculates the age
     function age($date) {
         $today = date_parse_from_format("j.n.Y", date("j.n.Y"));
         $date = date_parse_from_format("j.n.Y", $date);
@@ -66,5 +68,10 @@
         } else {
             return $age;
         }  
+    }
+
+    //gives an error message
+    function alert($msg) {
+        echo "<script type='text/javascript'>alert('$msg');</script>";
     }
 ?>
