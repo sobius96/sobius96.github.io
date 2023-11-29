@@ -48,17 +48,17 @@
                     <label>Bio Image</label>
                     <div>
                         <img id="bioImageSmall" src="img/bio/img_1.jpg" alt="Bio Image">
-                        <input type="radio" id="1" name="bioImg" value="1">
+                        <input type="radio" id="1" name="bioImg" value="1" <?php if ($data[1][0]['profile_picture'] == 1) {echo "checked";}?>>
                         <img id="bioImageSmall" src="img/bio/img_2.jpg" alt="Bio Image">
-                        <input type="radio" id="2" name="bioImg" value="2">
+                        <input type="radio" id="2" name="bioImg" value="2" <?php if ($data[1][0]['profile_picture'] == 2) {echo "checked";}?>>
                         <img id="bioImageSmall" src="img/bio/img_3.jpg" alt="Bio Image">
-                        <input type="radio" id="3" name="bioImg" value="3">
+                        <input type="radio" id="3" name="bioImg" value="3" <?php if ($data[1][0]['profile_picture'] == 3) {echo "checked";}?>>
                         <img id="bioImageSmall" src="img/bio/img_4.jpg" alt="Bio Image">
-                        <input type="radio" id="4" name="bioImg" value="4">
+                        <input type="radio" id="4" name="bioImg" value="4" <?php if ($data[1][0]['profile_picture'] == 4) {echo "checked";}?>>
                         <img id="bioImageSmall" src="img/bio/img_5.jpg" alt="Bio Image">
-                        <input type="radio" id="5" name="bioImg" value="5">
+                        <input type="radio" id="5" name="bioImg" value="5" <?php if ($data[1][0]['profile_picture'] == 5) {echo "checked";}?>>
                         <img id="bioImageSmall" src="img/bio/img_6.jpg" alt="Bio Image">
-                        <input type="radio" id="6" name="bioImg" value="6">
+                        <input type="radio" id="6" name="bioImg" value="6" <?php if ($data[1][0]['profile_picture'] == 6) {echo "checked";}?>>
                     </div>
                     <label for="birthday">Geburstag</label>
                     <input type="date" id="birthday" name="birthday" value="<?php echo $data[1][0]['birthday']?>">
