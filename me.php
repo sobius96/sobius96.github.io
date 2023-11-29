@@ -64,7 +64,7 @@
                     </div>
                     <div class="dataEntry">
                         <?php 
-                            echo $data[1][0]["birthday"];
+                            echo prep_date($data[1][0]["birthday"]);
                         ?>
                     </div>
                     <div class="dataHead">

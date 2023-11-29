@@ -51,4 +51,9 @@
             return [TRUE, $data];
         }
     }
+
+    function prep_date($date) {
+        $date = date_parse_from_format("Y.n.j", $date);
+        return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
+    }
 ?>
