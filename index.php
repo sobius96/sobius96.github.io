@@ -17,7 +17,7 @@
                 header(sprintf("Location: http://%s/login.html", $env["Ip"]));
                 exit();
             } else {
-                $sql = 'SELECT username, profile_picture, user_id FROM user_table';
+                $sql = 'SELECT username, profile_picture, user_id, user_location FROM user_table';
                 $params = [];
                 $values = access_database($sql, $params, $env);
 
@@ -38,7 +38,10 @@
         </header>
         <div class="wrapper content">
             <?php 
-                echo "dynamischer Inhalt";
+                foreach($data as &$user) {
+                    echo sprintf("<div class='userProfile'><img id='bioImageSmall' src='utils/img/bio/img_%s.jpg' alt='Bio Image'><div class='userInner'><div>%s</div><div>%s</div></div></div>", $user["profile_picture"], $user["username"], $user["user_location"]);
+                }
+                unset($user);
             ?>
         </div>
         <footer>
