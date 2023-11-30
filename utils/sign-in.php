@@ -62,7 +62,6 @@
         }
     } else {
         setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
-        setcookie("friend", "7", array ('path' => '/'));
         header(sprintf("Location: http://%s/utils/edit.php", $env["Ip"]));
         exit();
     }
