@@ -8,6 +8,23 @@
         <title>elephriend.</title>
     </head>
     <body>
+        <?php
+            require __DIR__ . '/utils/functions.php';
+
+            $env = load_env();
+            
+            if (!isset($_COOKIE["user"])) {
+                header(sprintf("Location: http://%s/login.html", $env["Ip"]));
+                exit();
+            } else {
+                $sql = 'SELECT username, profile_picture, user_id FROM user_table';
+                $params = [];
+                $values = access_database($sql, $params, $env);
+
+                $data = prep_single_data($values);
+                $data = $data[1];
+            }
+        ?>
         <header>
             <div class="wrapper header">
                 <a href="index.php">
