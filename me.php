@@ -30,14 +30,14 @@
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
                 <nav class="center">
-                    <a href="login.html" class="button">Login</a>
-                    <a href="me.php" class="button">Me</a>
-                    <a href="utils/edit.php" class="button">Edit</a>
+                    <a href="login.html" class="button paddingCustom">Login</a>
+                    <a href="me.php" class="button paddingCustom">Me</a>
+                    <a href="utils/edit.php" class="button paddingCustom">Edit</a>
                 </nav>
             </div>
         </header>
-        <div class="wrapper content flex gap column">
-            <div class="me flex gap row">
+        <div class="wrapper flex gap column paddingPercent">
+            <div class="flex gap row paddingPercent">
                 <div>
                     <?php
                         echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["profile_picture"]);  
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="me flex gap row">
+            <div class="flex gap row paddingPercent">
                 <div class="datacard flex gap column">
                     <div class="dataHead">
                         Geburstag:
@@ -84,7 +84,7 @@
                         ?>
                     </div>
                 </div>
-                <div class="bio">
+                <div class="bio paddingPx">
                     <?php 
                         echo $data[1][0]["bio"];
                     ?>

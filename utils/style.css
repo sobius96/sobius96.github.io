@@ -57,7 +57,39 @@ form {
     padding: var(--unit_percent);
     border-radius: var(--unit_px);
     box-shadow: 4px 4px;
+}
 
+input[type="submit"] {
+    font: var(--unit_px) 'Tahoma', sans-serif;
+    font-size: 14px;
+    border-radius: 7px;
+    border: none;
+    }
+
+input[type="text"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+    font: var(--unit_px) Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+input[type="email"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+input[type="date"] {
+    border: none;
+    border-radius: 7px;
+    padding-left: 5px;
 }
 
 /* do not touch */
@@ -84,15 +116,63 @@ form {
 .between {
     justify-content: space-between;
 }
-/* end of do not touch */
 
-/* ToDo */
-.content {
+.paddingPercent {
     padding: var(--unit_percent);
 }
 
-.me {
-    padding: var(--unit_percent);
+.paddingPx {
+    padding: var(--unit_px);
+}
+
+.paddingPxSmall {
+    padding: calc(var(--unit_px) * 0.5);
+}
+
+.paddingCustom {
+    padding: 10px 20px;
+}
+/* end of do not touch */
+
+/* ToDo */
+/* none */
+
+/* else */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--tertiary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.userButton {
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--hover);
+    border: none;
+    border-radius: var(--unit_px);
+    
+}
+
+.userProfile {
+    width: 100%;
+    border: 3px solid var(--tertiary);
+    border-radius: calc(var(--unit_px) * 0.5);
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
+    font-size: calc(var(--unit_px) * 1.5);
+}
+
+.bio {
+    width: 100%;
+    border: 3px solid var(--tertiary);
+    border-radius: var(--unit_px);
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
+    font-size: calc(var(--unit_px) * 1.25);
 }
 
 .headlines {
@@ -107,16 +187,6 @@ form {
 .datacard {
     min-width: 206px;
     font-size: calc(var(--unit_px) * 1.25);
-}
-
-.userProfile {
-    width: 100%;
-    border: 3px solid var(--tertiary);
-    border-radius: calc(var(--unit_px) * 0.5);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
-    padding: var(--unit_px);
-    font-size: calc(var(--unit_px) * 1.5);
 }
 
 .userInner {
@@ -164,27 +234,6 @@ form {
     margin-left: var(--unit_px);
 }
 
-.bio {
-    width: 100%;
-    border: 3px solid var(--tertiary);
-    border-radius: var(--unit_px);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
-    padding: var(--unit_px);
-    font-size: calc(var(--unit_px) * 1.25);
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--tertiary);
-    background-color: var(--primary);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
 #logo {
     width: 150px;
     height: 75px;
@@ -222,65 +271,11 @@ form {
         }
       }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--tertiary);
-    background-color: (--primary);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
 .error {
     color: #dc032d;
-}
-
-.userButton {
-    padding: calc(var(--unit_px) * 0.5);
-    margin-top: auto;
-    margin-bottom: auto;
-    background: var(--hover);
-    border: none;
-    border-radius: var(--unit_px);
-    
 }
 
 .heroicon {
     height: calc(var(--unit_px) * 1.5);
     width: calc(var(--unit_px) * 1.5);
-}
-
-input[type="submit"] {
-    font: var(--unit_px) 'Tahoma', sans-serif;
-    font-size: 14px;
-    border-radius: 7px;
-    border: none;
-    }
-
-input[type="text"] {
-    border: none;
-    border-radius: 7px;
-    padding-left: 5px;
-    font: var(--unit_px) Tahoma, sans-serif;
-    font-size: 14px;
-}
-
-input[type="password"] {
-    border: none;
-    border-radius: 7px;
-    padding-left: 5px;
-}
-
-input[type="email"] {
-    border: none;
-    border-radius: 7px;
-    padding-left: 5px;
-}
-
-input[type="date"] {
-    border: none;
-    border-radius: 7px;
-    padding-left: 5px;
 }
