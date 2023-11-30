@@ -37,7 +37,7 @@
             $data = prep_single_data($values);
         ?>
         <header>
-            <div class="wrapper header">
+            <div class="wrapper flex row between">
                 <a href="../index.php">
                     <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
@@ -47,9 +47,9 @@
                 </nav>
             </div>
         </header>
-        <div class="wrapper content">
+        <div class="wrapper content flex gap column">
             <form action="edit.php" method="post">
-                <div class="format">
+                <div class="flex gapSmall column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
                     <label>Bio Image</label>
@@ -75,7 +75,7 @@
                     <input type="text" id="bio" name="bio" value="<?php echo $data[1][0]['bio'];?>">
                     <?php echo $msg;?>
                 </div>
-                <div class="format">
+                <div class="flex gapSmall column">
                     <input type="submit" value="Save">
                 </div>
             </form>

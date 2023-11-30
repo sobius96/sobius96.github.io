@@ -60,53 +60,79 @@ form {
 
 }
 
+/* do not touch */
+.flex {
+    display: flex;
+}
+
+.gap {
+    gap: var(--unit_px);
+}
+
+.gapSmall {
+    gap: calc(var(--unit_px) * 0.5);
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.between {
+    justify-content: space-between;
+}
+/* end of do not touch */
+
+/* ToDo */
+.content {
+    padding: var(--unit_percent);
+}
+
+.me {
+    padding: var(--unit_percent);
+}
+
+.headlines {
+    width: 100%;
+    color: var(--tertiary);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
+}
+
+.datacard {
+    min-width: 206px;
+    font-size: calc(var(--unit_px) * 1.25);
+}
+
+.userProfile {
+    width: 100%;
+    border: 3px solid var(--tertiary);
+    border-radius: calc(var(--unit_px) * 0.5);
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
+    padding: var(--unit_px);
+    font-size: calc(var(--unit_px) * 1.5);
+}
+
+.userInner {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .wrapper {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    padding: var(--unit_percent);
-    gap: var(--unit_px);
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.format {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--unit_px) * 0.5);
-}
-
 .center {
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.me {
-    display: flex;
-    flex-direction: row;
-    gap: var(--unit_percent);
-    padding: var(--unit_percent);
-}
-
-.headlines {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: var(--unit_px);
-    color: var(--tertiary);
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
 }
 
 .userBig {
@@ -127,14 +153,6 @@ form {
     width: 100%;
     height: 2px;
     background-color: var(--tertiary);
-}
-
-.datacard {
-    min-width: 206px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--unit_px);
-    font-size: calc(var(--unit_px) * 1.25);
 }
 
 .dataHead {
@@ -217,31 +235,6 @@ form {
 
 .error {
     color: #dc032d;
-}
-
-.userProfile {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border: 3px solid var(--tertiary);
-    border-radius: calc(var(--unit_px) * 0.5);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
-    padding: var(--unit_px);
-    font-size: calc(var(--unit_px) * 1.5);
-}
-
-.userInner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--unit_px);
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.flex {
-    display: flex;
-    gap: var(--unit_px);
 }
 
 .userButton {

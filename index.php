@@ -26,7 +26,7 @@
             }
         ?>
         <header>
-            <div class="wrapper header">
+            <div class="wrapper flex row between">
                 <a href="index.php">
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
@@ -36,7 +36,7 @@
                 </nav>
             </div>
         </header>
-        <div class="wrapper content">
+        <div class="wrapper content flex gap column">
             <?php
                 echo '<script>
                         function showUser(id) {
@@ -46,10 +46,10 @@
                     </script>';
                 foreach($data as &$user) {
                     echo sprintf(
-                        '<div class="userProfile">
-                            <div class="flex">
+                        '<div class="userProfile flex between">
+                            <div class="flex gap">
                                 <img id="bioImageSmall" src="utils/img/bio/img_%s.jpg" alt="Bio Image">
-                                <div class="userInner">
+                                <div class="userInner flex gap column">
                                     <div>%s</div>
                                     <div>%s</div>
                                 </div>
