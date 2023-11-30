@@ -222,7 +222,7 @@ form {
 .userProfile {
     width: 100%;
     display: flex;
-    gap: var(--unit_px);
+    justify-content: space-between;
     border: 3px solid var(--tertiary);
     border-radius: calc(var(--unit_px) * 0.5);
     margin-left: var(--unit_px);
@@ -237,6 +237,26 @@ form {
     gap: var(--unit_px);
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.flex {
+    display: flex;
+    gap: var(--unit_px);
+}
+
+.userButton {
+    padding: calc(var(--unit_px) * 0.5);
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--hover);
+    border: none;
+    border-radius: var(--unit_px);
+    
+}
+
+.heroicon {
+    height: calc(var(--unit_px) * 1.5);
+    width: calc(var(--unit_px) * 1.5);
 }
 
 input[type="submit"] {
