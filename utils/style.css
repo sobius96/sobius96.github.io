@@ -142,23 +142,28 @@ input[type="date"] {
     margin-left: auto;
     margin-right: auto;
 }
+
+.mxPx {
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
+}
+
+.mlPx {
+    margin-left: var(--unit_px);
+}
 /* end of do not touch */
 
 /* ToDo */
-/* margin */
+/*  */
 .headlines {
     width: 100%;
     color: var(--tertiary);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
 }
 
 .userProfile {
     width: 100%;
     border: 3px solid var(--tertiary);
     border-radius: calc(var(--unit_px) * 0.5);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
     font-size: calc(var(--unit_px) * 1.5);
 }
 
@@ -166,14 +171,11 @@ input[type="date"] {
     width: 100%;
     border: 3px solid var(--tertiary);
     border-radius: var(--unit_px);
-    margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
     font-size: calc(var(--unit_px) * 1.25);
 }
 
 .dataEntry {
     font-weight: 500;
-    margin-left: var(--unit_px);
 }
 
 .userButton {

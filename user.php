@@ -45,7 +45,7 @@
                         echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["profile_picture"]);  
                     ?>
                 </div>
-                <div class="headlines flex gap column myAuto">
+                <div class="headlines flex gap column myAuto mxPx">
                     <div class="userBig mxAuto">
                         <?php 
                             echo $data[1][0]["user_name"];
@@ -64,7 +64,7 @@
                     <div class="dataHead">
                         Geburstag:
                     </div>
-                    <div class="dataEntry">
+                    <div class="dataEntry mlPx">
                         <?php 
                             echo prep_date($data[1][0]["birthday"]);
                         ?>
@@ -72,7 +72,7 @@
                     <div class="dataHead">
                         Alter:
                     </div>
-                    <div class="dataEntry">
+                    <div class="dataEntry mlPx">
                         <?php 
                             echo age(prep_date($data[1][0]["birthday"]));
                         ?>
@@ -80,13 +80,13 @@
                     <div class="dataHead">
                         Standort:
                     </div>
-                    <div class="dataEntry">
+                    <div class="dataEntry mlPx">
                         <?php 
                             echo $data[1][0]["user_location"];
                         ?>
                     </div>
                 </div>
-                <div class="bio paddingPx">
+                <div class="bio paddingPx mxPx">
                     <?php 
                         echo $data[1][0]["bio"];
                     ?>
