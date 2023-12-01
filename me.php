@@ -25,32 +25,32 @@
             }
         ?>
         <header>
-            <div class="wrapper flex row between">
+            <div class="wrapper flex row between mxAuto">
                 <a href="index.php">
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
-                <nav class="center">
+                <nav class="myAuto">
                     <a href="login.html" class="button paddingCustom">Login</a>
                     <a href="me.php" class="button paddingCustom">Me</a>
                     <a href="utils/edit.php" class="button paddingCustom">Edit</a>
                 </nav>
             </div>
         </header>
-        <div class="wrapper flex gap column paddingPercent">
+        <div class="wrapper flex gap column paddingPercent mxAuto">
             <div class="flex gap row paddingPercent">
                 <div>
                     <?php
                         echo sprintf('<img id="bioImage" src="utils/img/bio/img_%s.jpg" alt="Bio Image">', $data[1][0]["profile_picture"]);  
                     ?>
                 </div>
-                <div class="headlines flex gap column">
-                    <div class="userBig" >
+                <div class="headlines flex gap column myAuto">
+                    <div class="userBig mxAuto" >
                         <?php 
                             echo $data[1][0]["user_name"];
                         ?>
                     </div>
                     <div class="devider"></div> 
-                    <div class="usernameBig" >
+                    <div class="usernameBig mxAuto" >
                         <?php 
                             echo $data[1][0]["username"];
                         ?>
@@ -92,8 +92,8 @@
             </div>
         </div>
         <footer>
-            <div class="wrapper">
-                <div class="header">
+            <div class="wrapper mxAuto">
+                <div class="flex row between">
                     <div>
                         © 2023 elephriend.
                     </div>

@@ -132,29 +132,25 @@ input[type="date"] {
 .paddingCustom {
     padding: 10px 20px;
 }
+
+.myAuto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mxAuto {
+    margin-left: auto;
+    margin-right: auto;
+}
 /* end of do not touch */
 
 /* ToDo */
-/* none */
-
-/* else */
-.button {
-    display: inline-block;
-    text-decoration: none;
+/* margin */
+.headlines {
+    width: 100%;
     color: var(--tertiary);
-    background-color: var(--primary);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.userButton {
-    margin-top: auto;
-    margin-bottom: auto;
-    background: var(--hover);
-    border: none;
-    border-radius: var(--unit_px);
-    
+    margin-left: var(--unit_px);
+    margin-right: var(--unit_px);
 }
 
 .userProfile {
@@ -175,48 +171,45 @@ input[type="date"] {
     font-size: calc(var(--unit_px) * 1.25);
 }
 
-.headlines {
-    width: 100%;
-    color: var(--tertiary);
-    margin-top: auto;
-    margin-bottom: auto;
+.dataEntry {
+    font-weight: 500;
     margin-left: var(--unit_px);
-    margin-right: var(--unit_px);
 }
 
-.datacard {
-    min-width: 206px;
-    font-size: calc(var(--unit_px) * 1.25);
-}
-
-.userInner {
-    margin-top: auto;
-    margin-bottom: auto;
+.userButton {
+    background: var(--hover);
+    border: none;
+    border-radius: var(--unit_px);
 }
 
 .wrapper {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.center {
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .userBig {
-    margin-left: auto;
-    margin-right: auto;
     font-size: calc(var(--unit_px) * 2);
     font-weight: 500;
 }
 
 .usernameBig {
-    margin-left: auto;
-    margin-right: auto;
     font-size: calc(var(--unit_px) * 2.5);
     font-weight: 700;
+}
+
+/* else */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--tertiary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.datacard {
+    min-width: 206px;
+    font-size: calc(var(--unit_px) * 1.25);
 }
 
 .devider {
@@ -227,11 +220,6 @@ input[type="date"] {
 
 .dataHead {
     font-weight: 700;
-}
-
-.dataEntry {
-    font-weight: 500;
-    margin-left: var(--unit_px);
 }
 
 #logo {

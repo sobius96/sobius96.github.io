@@ -37,17 +37,17 @@
             $data = prep_single_data($values);
         ?>
         <header>
-            <div class="wrapper flex row between">
+            <div class="wrapper flex row between mxAuto">
                 <a href="../index.php">
                     <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
-                <nav class="center">
+                <nav class="myAuto">
                     <a href="../login.html" class="button paddingCustom">Login</a>
                     <a href="../me.php" class="button paddingCustom">Me</a>
                 </nav>
             </div>
         </header>
-        <div class="wrapper flex gap column paddingPercent">
+        <div class="wrapper flex gap column paddingPercent mxAuto">
             <form action="edit.php" method="post">
                 <div class="flex gapSmall column">
                     <label for="name">Name</label>
@@ -81,8 +81,8 @@
             </form>
         </div>
         <footer>
-            <div class="wrapper">
-                <div class="header">
+            <div class="wrapper mxAuto">
+                <div class="flex row between">
                     <div>
                         © 2023 elephriend.
                     </div>
