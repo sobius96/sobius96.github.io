@@ -29,7 +29,7 @@
                 <a href="index.php">
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
-                <nav class="myAuto">
+                <nav class="flex row gap myAuto">
                     <a href="login.html" class="button paddingCustom">Login</a>
                     <a href="me.php" class="button paddingCustom">Me</a>
                     <a href="utils/edit.php" class="button paddingCustom">Edit</a>

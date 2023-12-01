@@ -8,6 +8,21 @@
     --unit_percent: 1.5%;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+       --primary: #0c2a0a;
+       --secondary: #3d6e55;
+       --tertiary: #f9f9f9;
+       --hover: #b0ef04;
+       }
+       #logo {
+           width: 150px;
+           height: 75px;
+           object-fit: cover;
+           filter: invert(100%)
+       }
+     }
+
 body {
     background-color: var(--primary);
     font: var(--unit_px) Tahoma, sans-serif;
@@ -28,12 +43,6 @@ footer {
     padding-bottom: var(--unit_percent);
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    gap: var(--unit_px);
-}
-
 a {
     text-decoration: none;
     color: var(--tertiary)
@@ -44,13 +53,8 @@ a:hover {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     gap: calc(var(--unit_px) * 4);
     width: 40%;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 10%;
     margin-bottom: 10%;
     background-color: var(--secondary);
@@ -155,6 +159,8 @@ input[type="date"] {
 
 /* ToDo */
 /*  */
+
+/* else */
 .headlines {
     width: 100%;
     color: var(--tertiary);
@@ -198,7 +204,6 @@ input[type="date"] {
     font-weight: 700;
 }
 
-/* else */
 .button {
     display: inline-block;
     text-decoration: none;
@@ -224,6 +229,15 @@ input[type="date"] {
     font-weight: 700;
 }
 
+.error {
+    color: #dc032d;
+}
+
+.heroicon {
+    height: calc(var(--unit_px) * 1.5);
+    width: calc(var(--unit_px) * 1.5);
+}
+
 #logo {
     width: 150px;
     height: 75px;
@@ -244,28 +258,4 @@ input[type="date"] {
     border-radius: 9999px;
     border: 1px solid var(--tertiary);
     object-fit: cover;
-}
-
- @media (prefers-color-scheme: dark) {
-     :root {
-        --primary: #0c2a0a;
-        --secondary: #3d6e55;
-        --tertiary: #f9f9f9;
-        --hover: rgb(176, 239, 4);
-        }
-        #logo {
-            width: 150px;
-            height: 75px;
-            object-fit: cover;
-            filter: invert(100%)
-        }
-      }
-
-.error {
-    color: #dc032d;
-}
-
-.heroicon {
-    height: calc(var(--unit_px) * 1.5);
-    width: calc(var(--unit_px) * 1.5);
 }

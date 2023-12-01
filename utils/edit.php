@@ -41,14 +41,14 @@
                 <a href="../index.php">
                     <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
-                <nav class="myAuto">
+                <nav class="flex row gap myAuto">
                     <a href="../login.html" class="button paddingCustom">Login</a>
                     <a href="../me.php" class="button paddingCustom">Me</a>
                 </nav>
             </div>
         </header>
         <div class="wrapper flex gap column paddingPercent mxAuto">
-            <form action="edit.php" method="post">
+            <form class="flex column between mxAuto" action="edit.php" method="post">
                 <div class="flex gapSmall column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
