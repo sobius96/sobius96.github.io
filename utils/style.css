@@ -155,6 +155,22 @@ input[type="date"] {
 .mlPx {
     margin-left: var(--unit_px);
 }
+
+.cursive {
+    font-style: italic;
+}
+
+.weight700 {
+    font-weight: 700;
+}
+
+.sizeXl {
+    font-size: calc(var(--unit_px) * 2);
+}
+
+.sizeL {
+    font-size: calc(var(--unit_px) * 1.5);
+}
 /* end of do not touch */
 
 /* ToDo */
