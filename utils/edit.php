@@ -48,7 +48,7 @@
             </div>
         </header>
         <div class="flex gap column paddingPercent mxAuto maxWidth">
-            <form class="flex column between mxAuto" action="edit.php" method="post">
+            <form class="flex column between mxAuto padding" action="edit.php" method="post">
                 <div class="flex gapSmall column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
