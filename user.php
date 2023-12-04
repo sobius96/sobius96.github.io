@@ -46,13 +46,13 @@
                     ?>
                 </div>
                 <div class="headlines flex gap column myAuto mxPx full">
-                    <div class="userBig mxAuto">
+                    <div class="mxAuto sizeXl weight500">
                         <?php 
                             echo $data[1][0]["user_name"];
                         ?>
                     </div>
                     <div class="devider full"></div> 
-                    <div class="usernameBig mxAuto" >
+                    <div class="mxAuto size2Xl weight700">
                         <?php 
                             echo $data[1][0]["username"];
                         ?>
@@ -60,33 +60,33 @@
                 </div>
             </div>
             <div class="flex gap row paddingPercent">
-                <div class="datacard flex gap column minWidth">
-                    <div class="dataHead">
+                <div class="flex gap column minWidth sizeM">
+                    <div class="weight700">
                         Geburstag:
                     </div>
-                    <div class="dataEntry mlPx">
+                    <div class="mlPx weight500">
                         <?php 
                             echo prep_date($data[1][0]["birthday"]);
                         ?>
                     </div>
-                    <div class="dataHead">
+                    <div class="weight700">
                         Alter:
                     </div>
-                    <div class="dataEntry mlPx">
+                    <div class="mlPx weight500">
                         <?php 
                             echo age(prep_date($data[1][0]["birthday"]));
                         ?>
                     </div>
-                    <div class="dataHead">
+                    <div class="weight700">
                         Standort:
                     </div>
-                    <div class="dataEntry mlPx">
+                    <div class="mlPx weight500">
                         <?php 
                             echo $data[1][0]["user_location"];
                         ?>
                     </div>
                 </div>
-                <div class="bio paddingPx mxPx full">
+                <div class="bio paddingPx mxPx full sizeM">
                     <?php 
                         echo $data[1][0]["bio"];
                     ?>

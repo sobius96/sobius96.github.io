@@ -46,7 +46,7 @@
                     </script>';
                 foreach($data as &$user) {
                     echo sprintf(
-                        '<div class="userProfile flex between paddingPx mxPx full">
+                        '<div class="userProfile flex between paddingPx mxPx full sizeL">
                             <div class="flex gap">
                                 <img id="bioImageSmall" src="utils/img/bio/img_%s.jpg" alt="Bio Image">
                                 <div class="flex gap column myAuto">

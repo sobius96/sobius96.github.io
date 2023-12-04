@@ -174,6 +174,10 @@ input[type="date"] {
     font-style: italic;
 }
 
+.weight500 {
+    font-weight: 500;
+}
+
 .weight600 {
     font-weight: 600;
 }
@@ -182,12 +186,20 @@ input[type="date"] {
     font-weight: 700;
 }
 
+.size2Xl {
+    font-size: calc(var(--unit_px) * 2.5);
+}
+
 .sizeXl {
     font-size: calc(var(--unit_px) * 2);
 }
 
 .sizeL {
     font-size: calc(var(--unit_px) * 1.5);
+}
+
+.sizeM {
+    font-size: calc(var(--unit_px) * 1.25);
 }
 /* end of do not touch */
 
@@ -201,10 +213,6 @@ input[type="date"] {
     background-color: var(--tertiary);
 }
 
-.datacard {
-    font-size: calc(var(--unit_px) * 1.25);
-}
-
 .headlines {
     color: var(--tertiary);
 }
@@ -212,33 +220,17 @@ input[type="date"] {
 .userProfile {
     border: 3px solid var(--tertiary);
     border-radius: calc(var(--unit_px) * 0.5);
-    font-size: calc(var(--unit_px) * 1.5);
 }
 
 .bio {
     border: 3px solid var(--tertiary);
     border-radius: var(--unit_px);
-    font-size: calc(var(--unit_px) * 1.25);
-}
-
-.dataEntry {
-    font-weight: 500;
 }
 
 .userButton {
     background: var(--hover);
     border: none;
     border-radius: var(--unit_px);
-}
-
-.userBig {
-    font-size: calc(var(--unit_px) * 2);
-    font-weight: 500;
-}
-
-.usernameBig {
-    font-size: calc(var(--unit_px) * 2.5);
-    font-weight: 700;
 }
 
 .button {
@@ -249,10 +241,6 @@ input[type="date"] {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-}
-
-.dataHead {
-    font-weight: 700;
 }
 
 .error {
