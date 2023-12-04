@@ -169,6 +169,26 @@ input[type="date"] {
 .minWidth {
     min-width: 206px;
 }
+
+.cursive {
+    font-style: italic;
+}
+
+.weight600 {
+    font-weight: 600;
+}
+
+.weight700 {
+    font-weight: 700;
+}
+
+.sizeXl {
+    font-size: calc(var(--unit_px) * 2);
+}
+
+.sizeL {
+    font-size: calc(var(--unit_px) * 1.5);
+}
 /* end of do not touch */
 
 /* ToDo */
