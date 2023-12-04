@@ -7,7 +7,7 @@
         <link href="utils/img/elephriend_icon.png" rel="icon" type="image/png">
         <title>elephriend. | me</title>
     </head>
-    <body>
+    <body class="font m0 colorT bgcolorP">
         <?php
             require __DIR__ . '/utils/functions.php';
 
@@ -24,7 +24,7 @@
                 $data = prep_single_data($values);
             }
         ?>
-        <header>
+        <header class="bgcolorS">
             <div class="flex row between mxAuto maxWidth">
                 <a href="index.php">
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
@@ -49,7 +49,7 @@
                             echo $data[1][0]["user_name"];
                         ?>
                     </div>
-                    <div class="devider full"></div> 
+                    <div class="devider full bgcolorT"></div> 
                     <div class="mxAuto size2Xl weight700">
                         <?php 
                             echo $data[1][0]["username"];
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <footer class="full">
+        <footer class="full bgcolorS">
             <div class="mxAuto maxWidth">
                 <div class="flex row between">
                     <div>

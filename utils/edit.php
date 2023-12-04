@@ -7,7 +7,7 @@
         <link href="img/elephriend_icon.png" rel="icon" type="image/png">
         <title>elephriend. | edit</title>
     </head>
-    <body>
+    <body class="font m0 colorT bgcolorP">
         <?php 
             //import functions
             require __DIR__ . '/functions.php';
@@ -19,7 +19,7 @@
                 exit();
             } 
             if (isset($_COOKIE["error"])) {
-                $msg = "<div class='error'>Du musst einen Namen, eine Bio und ein Bild angeben!</div>";
+                $msg = "<div class='colorR'>Du musst einen Namen, eine Bio und ein Bild angeben!</div>";
                 setcookie("error", "", time()-3600, "/");
             } else if (!empty($_POST)) {
                 $msg = "";
@@ -36,7 +36,7 @@
 
             $data = prep_single_data($values);
         ?>
-        <header>
+        <header class="bgcolorS">
             <div class="flex row between mxAuto maxWidth">
                 <a href="../index.php">
                     <img id="logo" src="img/elephriend-2-ele.png" alt="elephriend-logo">
@@ -48,7 +48,7 @@
             </div>
         </header>
         <div class="flex gap column paddingPercent mxAuto maxWidth">
-            <form class="flex column between mxAuto padding" action="edit.php" method="post">
+            <form class="flex column between mxAuto padding bgcolorS" action="edit.php" method="post">
                 <div class="flex gapSmall column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<?php echo $data[1][0]['user_name'];?>">
@@ -80,7 +80,7 @@
                 </div>
             </form>
         </div>
-        <footer class="full">
+        <footer class="full bgcolorS">
             <div class="mxAuto maxWidth">
                 <div class="flex row between">
                     <div>

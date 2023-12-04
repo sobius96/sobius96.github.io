@@ -21,23 +21,14 @@
            object-fit: cover;
            filter: invert(100%)
        }
-     }
-
-body {
-    background-color: var(--primary);
-    font: var(--unit_px) Tahoma, sans-serif;
-    color: var(--tertiary);
-    margin: 0;
 }
 
 header {
-    background-color: var(--secondary);
     padding-top: var(--unit_percent);
     padding-bottom: var(--unit_percent);
 }
 
 footer {
-    background-color: var(--secondary);
     padding-top: var(--unit_percent);
     padding-bottom: var(--unit_percent);
 }
@@ -56,13 +47,11 @@ form {
     width: 40%;
     margin-top: 10%;
     margin-bottom: 10%;
-    background-color: var(--secondary);
     border-radius: var(--unit_px);
     box-shadow: 4px 4px;
 }
 
 input[type="submit"] {
-    font: var(--unit_px) 'Tahoma', sans-serif;
     font-size: 14px;
     border-radius: 7px;
     border: none;
@@ -72,7 +61,6 @@ input[type="text"] {
     border: none;
     border-radius: 7px;
     padding-left: 5px;
-    font: var(--unit_px) Tahoma, sans-serif;
     font-size: 14px;
 }
 
@@ -95,6 +83,34 @@ input[type="date"] {
 }
 
 /* do not touch */
+.font {
+    font: var(--unit_px) Tahoma, sans-serif;
+}
+
+.colorT {
+    color: var(--tertiary);
+}
+
+.colorR {
+    color: #dc032d;
+}
+
+.colorH {
+    background: var(--hover);
+}
+
+.bgcolorP {
+    background-color: var(--primary);
+}
+
+.bgcolorS {
+    background-color: var(--secondary);
+}
+
+.bgcolorT {
+    background-color: var(--tertiary);
+}
+
 .flex {
     display: flex;
 }
@@ -137,6 +153,10 @@ input[type="date"] {
 
 .paddingCustom {
     padding: 10px 20px;
+}
+
+.m0 {
+    margin: 0;
 }
 
 .myAuto {
@@ -203,18 +223,8 @@ input[type="date"] {
 }
 /* end of do not touch */
 
-/* ToDo */
-/*  */
-
-
-/* else */
 .devider {
     height: 2px;
-    background-color: var(--tertiary);
-}
-
-.headlines {
-    color: var(--tertiary);
 }
 
 .userProfile {
@@ -228,7 +238,6 @@ input[type="date"] {
 }
 
 .userButton {
-    background: var(--hover);
     border: none;
     border-radius: var(--unit_px);
 }
@@ -236,15 +245,10 @@ input[type="date"] {
 .button {
     display: inline-block;
     text-decoration: none;
-    color: var(--tertiary);
     background-color: var(--primary);
     border: none;
     border-radius: 20px;
     cursor: pointer;
-}
-
-.error {
-    color: #dc032d;
 }
 
 #logo {
