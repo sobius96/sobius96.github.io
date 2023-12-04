@@ -57,7 +57,6 @@ form {
     margin-top: 10%;
     margin-bottom: 10%;
     background-color: var(--secondary);
-    padding: var(--unit_percent);
     border-radius: var(--unit_px);
     box-shadow: 4px 4px;
 }
@@ -118,6 +117,10 @@ input[type="date"] {
 
 .between {
     justify-content: space-between;
+}
+
+.padding {
+    padding: var(--unit_percent);
 }
 
 .paddingPercent {
@@ -256,4 +259,9 @@ input[type="date"] {
     border-radius: 9999px;
     border: 1px solid var(--tertiary);
     object-fit: cover;
+}
+
+.heroicon {
+    height: calc(var(--unit_px) * 1.5);
+    width: calc(var(--unit_px) * 1.5);
 }
