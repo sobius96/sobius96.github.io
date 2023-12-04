@@ -51,4 +51,49 @@
             return [TRUE, $data];
         }
     }
+    
+    //preparing the date to a nicer format
+    function prep_date($date) {
+        if (!($date === "0001-01-01")) {
+            $date = date_parse_from_format("Y.n.j", $date);
+            return sprintf("%s.%s.%s", $date["day"], $date["month"], $date["year"]);
+        } else {
+            return "N/A";
+        }
+    }
+
+    //calculates the age
+    function age($date) {
+        if (!($date === "N/A")) {
+            $today = date_parse_from_format("j.n.Y", date("j.n.Y"));
+            $date = date_parse_from_format("j.n.Y", $date);
+            $age = intval($today["year"]) - intval($date["year"]);
+            if ((intval($today["month"]) <= intval($date["month"])) and (intval($today["day"]) < intval($date["day"]))) {
+                return $age - 1;
+            } else {
+                return $age;
+            } 
+        } else {
+            return "N/A";
+        }
+    }
+
+    //check input data
+    function check($data, $env, $important=true, $date=false) {
+        if (!$important) {
+            if ($date and empty($data)) {
+                return "0001-01-01";
+            } else if (!empty(trim($data))) {
+                return $data;
+            } else {
+                return "N/A";
+            }
+        } else if (empty($data)) {
+            setcookie("error", "  ", array ('path' => '/'));
+            header(sprintf("Location: http://%s/utils/edit.php", $env["Ip"]));
+            exit();
+        } else {
+            return $data;
+        }
+    }
 ?>

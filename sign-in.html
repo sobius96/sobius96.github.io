@@ -5,39 +5,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="utils/style.css" rel="stylesheet" type="text/css">
         <link href="utils/img/elephriend_icon.png" rel="icon" type="image/png">
-        <title>elephriend. | sign in</title>
+        <title>elephriend. | Sign in</title>
     </head>
-    <body>
-        <header>
-            <div class="wrapper header">
-                <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
-                <nav class="center">
-                    <a href="index.php">Home</a>
-                    <a href="login.html">Login</a>
-                    <a href="me.php">Me</a>
+    <body class="font m0 colorT bgcolorP">
+        <script>
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            if (!(getCookie("error") === "")) {
+                alert(getCookie("error"));
+                document.cookie = "error=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            } 
+        </script>
+        <header class="bgcolorS">
+            <div class="flex row between mxAuto maxWidth">
+                <a href="index.php">
+                    <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
+                </a>
+                <nav class="flex row gap myAuto">
+                    <a href="login.html" class="button paddingCustom">Login</a>
+                    <a href="me.php" class="button paddingCustom">Me</a>
                 </nav>
             </div>
         </header>
-        <div class="wrapper content">
-            <form action="utils/sign-in.php" method="post">
-                <div class="format">
+        <div class="flex gap column paddingPercent mxAuto maxWidth">
+            <form class="flex column between mxAuto padding bgcolorS" action="utils/sign-in.php" method="post">
+                <div class="flex gapSmall column">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username">
                     <label for="mail">Email</label>
-                    <input type="text" id="mail" name="mail">
-                    <label for="password_1">Passwort</label>
+                    <input type="email" id="mail" name="mail">
+                    <label for="password_1">Password</label>
                     <input type="password" id="password_1" name="password_1">
-                    <label for="password_2">repeat Passwort</label>
+                    <label for="password_2">Repeat Password</label>
                     <input type="password" id="password_2" name="password_2">
                 </div>
-                <div class="format">
-                    <input type="submit" value="Login">
+                <div class="flex gapSmall column">
+                    <input type="submit" value="Sign In">
+                    <div>
+                        Already have an account ?
+                        <a href="login.html">Log in</a>
+                    </div>
                 </div>
             </form>
         </div>
-        <footer>
-            <div class="wrapper">
-                <div class="header">
+        <footer class="full bgcolorS">
+            <div class="mxAuto maxWidth">
+                <div class="flex row between">
                     <div>
                         © 2023 elephriend.
                     </div>

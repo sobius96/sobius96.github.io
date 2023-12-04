@@ -1,6 +1,4 @@
 <?php 
-    //ToDo: remove every echo if finished
-
     //import functions
     require __DIR__ . '/functions.php';
 
@@ -16,18 +14,55 @@
     //check if Inputs are valid
     //ToDo: ErrorPage, check if Username is free, check if mail is free
     if (same_password($password_1, $password_2) and valid_len($password_1)) {
-        echo "Password accepted <br>";
+        $password = hash('sha256', $password_1);
     } else {
-        echo "something is wrong with password <br>";
+        setcookie("error", "Passwort muss 8-16 Zeichen lang sein und die Passwörter müssen übereinstimmen", array ('path' => '/'));
+        header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+        exit();
+    }
+
+    $sql = 'SELECT user_id FROM user_table WHERE username=?';
+    $params = [$user];
+    $values = prep_single_data(access_database($sql, $params, $env));
+
+    if ($values[0]) {
+        setcookie("error", "Username existiert bereits", array ('path' => '/'));
+        header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+        exit();
+    }
+
+    $sql = 'SELECT user_id FROM user_table WHERE email=?';
+    $params = [$mail];
+    $values = prep_single_data(access_database($sql, $params, $env));
+
+    if ($values[0]) {
+        setcookie("error", "Email existiert bereits", array ('path' => '/'));
+        header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+        exit();
     }
 
     //create connection to DB
     //works with values of .env File
-    $db_connection = pg_connect(sprintf("host=%s port=%s user=%s password=%s", $env["Host"], $env["Port"], $env["User"], $env["Password"])) or die("Could not connect");
-    echo "Connection successfully";
-    pg_close($db_connection);
+    $sql = 'INSERT INTO user_table(username, user_password, email) VALUES (?, ?, ?)';
+    $params = [$user, $password, $mail];
+    access_database($sql, $params, $env);
+
+    //check if user exist now
+    $sql = 'SELECT user_id FROM user_table WHERE username=? AND user_password=?';
+    $params = [$user, $password];
+    $data = prep_single_data(access_database($sql, $params, $env));
+
+    if (!$data[0]) {
+        try {
+            setcookie("user", " ", time()-3600, "/");
+        } finally {
+            setcookie("error", "Etwas ist schief gelaufen", array ('path' => '/'));
+            header(sprintf("Location: http://%s/sign-in.html", $env["Ip"]));
+            exit();
+        }
+    } else {
+        setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
+        header(sprintf("Location: http://%s/utils/edit.php", $env["Ip"]));
+        exit();
+    }
 ?>
-<!-- uncomment if finished -->
-<!-- <script>
-    window.location.replace("me.php")
-</script> -->

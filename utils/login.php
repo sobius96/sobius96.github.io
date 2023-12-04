@@ -13,7 +13,7 @@
 
     //create connection to DB
     //works with values of .env File
-    $sql = 'SELECT * FROM user_table WHERE username=? AND user_password=?';
+    $sql = 'SELECT user_id FROM user_table WHERE username=? AND user_password=?';
     $params = [$user, $password];
     $values = access_database($sql, $params, $env);
     
@@ -23,12 +23,13 @@
         try {
             setcookie("user", " ", time()-3600, "/");
         } finally {
-            header("Location: http://localhost/login.html");
+            setcookie("error", "Username oder Passwort stimmen nicht überein!", array ('path' => '/'));
+            header(sprintf("Location: http://%s/login.html", $env["Ip"]));
             exit();
         }
     } else {
-        setcookie("user", $data[1][0]["username"], array ('path' => '/'));
-        header("Location: http://localhost/me.php");
+        setcookie("user", $data[1][0]["user_id"], array ('path' => '/'));
+        header(sprintf("Location: http://%s/me.php", $env["Ip"]));
         exit();
     }
 ?>

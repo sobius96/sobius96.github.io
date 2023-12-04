@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="utils/style.css" rel="stylesheet" type="text/css">
         <link href="utils/img/elephriend_icon.png" rel="icon" type="image/png">
-        <title>elephriend. | me</title>
+        <title>elephriend. | user</title>
     </head>
     <body class="font m0 colorT bgcolorP">
         <?php
@@ -13,12 +13,15 @@
 
             $env = load_env();
             
-            if (!isset($_COOKIE["user"])) {
-                header(sprintf("Location: http://%s/login.html", $env["Ip"]));
-                exit();
+            if (!isset($_COOKIE["friend"])) {
+                $sql = 'SELECT * FROM user_table WHERE user_id=?';
+                $params = ["7"];
+                $values = access_database($sql, $params, $env);
+
+                $data = prep_single_data($values);
             } else {
                 $sql = 'SELECT * FROM user_table WHERE user_id=?';
-                $params = [$_COOKIE["user"]];
+                $params = [$_COOKIE["friend"]];
                 $values = access_database($sql, $params, $env);
 
                 $data = prep_single_data($values);
@@ -32,7 +35,6 @@
                 <nav class="flex row gap myAuto">
                     <a href="login.html" class="button paddingCustom">Login</a>
                     <a href="me.php" class="button paddingCustom">Me</a>
-                    <a href="utils/edit.php" class="button paddingCustom">Edit</a>
                 </nav>
             </div>
         </header>
