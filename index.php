@@ -26,7 +26,7 @@
             }
         ?>
         <header>
-            <div class="wrapper flex row between mxAuto">
+            <div class="flex row between mxAuto maxWidth">
                 <a href="index.php">
                     <img id="logo" src="utils/img/elephriend-2-ele.png" alt="elephriend-logo">
                 </a>
@@ -36,7 +36,7 @@
                 </nav>
             </div>
         </header>
-        <div class="wrapper flex gap column paddingPercent mxAuto">
+        <div class="flex gap column paddingPercent mxAuto maxWidth">
             <?php
                 echo '<script>
                         function showUser(id) {
@@ -46,7 +46,7 @@
                     </script>';
                 foreach($data as &$user) {
                     echo sprintf(
-                        '<div class="userProfile flex between paddingPx mxPx">
+                        '<div class="userProfile flex between paddingPx mxPx full">
                             <div class="flex gap">
                                 <img id="bioImageSmall" src="utils/img/bio/img_%s.jpg" alt="Bio Image">
                                 <div class="flex gap column myAuto">
@@ -65,8 +65,8 @@
                 unset($user);
             ?>
         </div>
-        <footer>
-            <div class="wrapper mxAuto">
+        <footer class="full">
+            <div class="mxAuto maxWidth">
             <div class="flex row between">
                     <div>
                         © 2023 elephriend.

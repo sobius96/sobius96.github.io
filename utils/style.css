@@ -37,7 +37,6 @@ header {
 }
 
 footer {
-    width: 100%;
     background-color: var(--secondary);
     padding-top: var(--unit_percent);
     padding-bottom: var(--unit_percent);
@@ -156,6 +155,18 @@ input[type="date"] {
     margin-left: var(--unit_px);
 }
 
+.full {
+    width: 100%;
+}
+
+.maxWidth {
+    max-width: 1200px;
+}
+
+.minWidth {
+    min-width: 206px;
+}
+
 .cursive {
     font-style: italic;
 }
@@ -176,21 +187,28 @@ input[type="date"] {
 /* ToDo */
 /*  */
 
+
 /* else */
+.devider {
+    height: 2px;
+    background-color: var(--tertiary);
+}
+
+.datacard {
+    font-size: calc(var(--unit_px) * 1.25);
+}
+
 .headlines {
-    width: 100%;
     color: var(--tertiary);
 }
 
 .userProfile {
-    width: 100%;
     border: 3px solid var(--tertiary);
     border-radius: calc(var(--unit_px) * 0.5);
     font-size: calc(var(--unit_px) * 1.5);
 }
 
 .bio {
-    width: 100%;
     border: 3px solid var(--tertiary);
     border-radius: var(--unit_px);
     font-size: calc(var(--unit_px) * 1.25);
@@ -204,10 +222,6 @@ input[type="date"] {
     background: var(--hover);
     border: none;
     border-radius: var(--unit_px);
-}
-
-.wrapper {
-    max-width: 1200px;
 }
 
 .userBig {
@@ -230,28 +244,12 @@ input[type="date"] {
     cursor: pointer;
 }
 
-.datacard {
-    min-width: 206px;
-    font-size: calc(var(--unit_px) * 1.25);
-}
-
-.devider {
-    width: 100%;
-    height: 2px;
-    background-color: var(--tertiary);
-}
-
 .dataHead {
     font-weight: 700;
 }
 
 .error {
     color: #dc032d;
-}
-
-.heroicon {
-    height: calc(var(--unit_px) * 1.5);
-    width: calc(var(--unit_px) * 1.5);
 }
 
 #logo {
